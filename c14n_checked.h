@@ -25,19 +25,15 @@
 #pragma CHECKED_SCOPE pop
 #endif
 
+#ifdef __checkedc
 #ifndef __XML_C14N__CHECKED_H__
 #define __XML_C14N_CHECKED_H__
 #ifdef LIBXML_C14N_ENABLED
 #ifdef LIBXML_OUTPUT_ENABLED
 
-
-#ifdef __cplusplus
-extern "C" {
-#endif /* __cplusplus */
-
-#include <libxml/xmlversion.h>
-#include <libxml/tree.h>
-#include <libxml/xpath.h>
+#include <xmlversion.h>
+#include <tree.h>
+#include <xpath.h>
 
 /*
  * XML Canonicalization
@@ -132,11 +128,8 @@ XMLPUBFUN int XMLCALL
 					 xmlOutputBufferPtr buf);
 
 #pragma CHECKED_SCOPE pop
-#ifdef __cplusplus
-}
-#endif /* __cplusplus */
 
 #endif /* LIBXML_OUTPUT_ENABLED */
 #endif /* LIBXML_C14N_ENABLED */
 #endif /* __XML_C14N_H__ */
-
+#endif /* checkedc */

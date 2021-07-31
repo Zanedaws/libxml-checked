@@ -19,15 +19,11 @@
 
 #include <stdio.h>
 
-#include <libxml/xmlversion.h>
-#include <libxml/xmlstring.h>
-#include <libxml/tree.h>
+#include <xmlversion.h>
+#include <xmlstring.h>
+#include <tree.h>
 
 #ifdef LIBXML_CATALOG_ENABLED
-
-#ifdef __cplusplus
-extern "C" {
-#endif
 
 /**
  * XML_CATALOGS_NAMESPACE:
@@ -175,8 +171,5 @@ XMLPUBFUN const xmlChar * XMLCALL
 XMLPUBFUN const xmlChar * XMLCALL
 		xmlCatalogGetPublic	(const xmlChar *pubID);
 
-#ifdef __cplusplus
-}
-#endif
 #endif /* LIBXML_CATALOG_ENABLED */
 #endif /* __XML_CATALOG_H__ */
