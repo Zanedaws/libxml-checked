@@ -1,0 +1,1 @@
+['uri.h', 'xmlversion.h', 'xmlexports.h', 'tree.h', 'xmlstring.h', 'xmlregexp.h', 'dict.h', 'xmlmemory.h', 'threads.h', 'globals.h', 'parser.h', 'hash.h', 'valid.h', 'xmlerror.h', 'list.h', 'xmlautomata.h', 'entities.h', 'encoding.h', 'xmlIO.h', 'SAX', 'xlink.h', 'debugXML.h', 'xpath.h', 'HTMLtree.h', 'HTMLparser.h', 'xinclude.h', 'catalog.h']
