@@ -79,7 +79,7 @@ XMLPUBFUN int XMLCALL
 		xmlC14NDocSaveTo	(xmlDocPtr doc,
 					 xmlNodeSetPtr nodes,
 					 int mode, /* a xmlC14NMode */
-					 xmlChar **inclusive_ns_prefixes : itype(_Array_ptr<_Ptr<xmlChar>>),
+					 xmlChar **inclusive_ns_prefixes : itype(_Nt_array_ptr<_Nt_array_ptr<xmlChar>>),
 					 int with_comments,
 					 xmlOutputBufferPtr buf);
 
@@ -87,17 +87,17 @@ XMLPUBFUN int XMLCALL
 		xmlC14NDocDumpMemory	(xmlDocPtr doc,
 					 xmlNodeSetPtr nodes,
 					 int mode, /* a xmlC14NMode */
-					 xmlChar **inclusive_ns_prefixes : itype(_Array_ptr<_Ptr<xmlChar>>),
+					 xmlChar **inclusive_ns_prefixes : itype(_Nt_array_ptr<_Nt_array_ptr<xmlChar>>),
 					 int with_comments,
-					 xmlChar **doc_txt_ptr : itype(_Array_ptr<_Ptr<xmlChar>>));
+					 xmlChar **doc_txt_ptr : itype(_Ptr<_Nt_array_ptr<xmlChar>>));
 
 XMLPUBFUN int XMLCALL
 		xmlC14NDocSave		(xmlDocPtr doc,
 					 xmlNodeSetPtr nodes,
 					 int mode, /* a xmlC14NMode */
-					 xmlChar **inclusive_ns_prefixes : itype(_Array_ptr<_Ptr<xmlChar>>),
+					 xmlChar **inclusive_ns_prefixes : itype(_Nt_array_ptr<_Nt_array_ptr<xmlChar>>),
 					 int with_comments,
-					 const char* filenamei : itype(_Ptr<const char>),
+					 const char* filename : itype(_Nt_array_ptr<const char>),
 					 int compression);
 
 
@@ -114,16 +114,16 @@ XMLPUBFUN int XMLCALL
  *
  * Returns 1 if the node should be included
  */
-typedef int (*xmlC14NIsVisibleCallback)	(void* user_data,
+typedef int (*xmlC14NIsVisibleCallback)	(void* user_data : itype(_Ptr<void>),
 					 xmlNodePtr node,
 					 xmlNodePtr parent);
 
 XMLPUBFUN int XMLCALL
 		xmlC14NExecute		(xmlDocPtr doc,
 					 xmlC14NIsVisibleCallback is_visible_callback,
-					 _Itype_for_any(T) void* user_data : itype(_Ptr<T>),
+					 void* user_data : itype(_Ptr<void>),
 					 int mode, /* a xmlC14NMode */
-					 xmlChar **inclusive_ns_prefixes : itype(_Array_ptr<_Ptr<xmlChar>>),
+					 xmlChar **inclusive_ns_prefixes : itype(_Nt_array_ptr<_Nt_array_ptr<xmlChar>>),
 					 int with_comments,
 					 xmlOutputBufferPtr buf);
 
