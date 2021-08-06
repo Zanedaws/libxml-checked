@@ -228,7 +228,7 @@ XMLPUBVAR xmlReallocFunc xmlRealloc;
 #endif
 
 #ifdef LIBXML_THREAD_ENABLED
-XMLPUBFUN  xmlFreeFunc * XMLCALL __xmlFree(void);
+XMLPUBFUN  xmlFreeFunc * XMLCALL __xmlFree(void) : itype(_Ptr<xmlFreeFunc>);
 #define xmlFree \
 (*(__xmlFree()))
 #else
